@@ -14,8 +14,7 @@ Add this plugin in sanity.json inside the plugins array.
 
 ```json
 {
-	...,
-	"plugins": [
+  "plugins": [
     "@sanity/base",
     "@sanity/components",
     "@sanity/default-layout",
@@ -41,7 +40,7 @@ studio/plugins/my-clicker/sanity.json
 
 studio/plugins/my-clicker/index.js
 
-```json
+```js
 import MyClicker from './MyClicker'
 
 export default {
@@ -53,7 +52,7 @@ export default {
 
 studio/plugins/my-clicker/MyClicker.js
 
-```json
+```js
 
 import React, { useState} from 'react'
 
