@@ -177,7 +177,6 @@ Add this script in your package.json:
 
 ```json
 {
-  …,
   "scripts": {
     "test": "cd test/ && DEBUG=pw:api jest --detectOpenHandles --runInBand"
   }
