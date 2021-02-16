@@ -184,5 +184,3 @@ Add this script in your package.json:
   }
 }
 ```
-
-![image](https://user-images.githubusercontent.com/580312/108113519-eb995800-7097-11eb-9e50-7640622ca15b.png)
