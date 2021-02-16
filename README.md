@@ -4,6 +4,8 @@ At some point you may add custom functionality to Sanity studio. Maybe a plugin,
 
 Of course you could do the same thing using Puppeteer, Cypress or other headless testing software.
 
+![sanity-playwright](https://user-images.githubusercontent.com/580312/108113887-5cd90b00-7098-11eb-9a44-3786f84588e3.gif)
+
 ## Setting up the studio
 
 First we need a working studio with a custom plugin. For testing you should create a dataset named 'testing', so your tests won't accidentally ruin your real content `sanity dataset create testing`.
@@ -182,3 +184,5 @@ Add this script in your package.json:
   }
 }
 ```
+
+![image](https://user-images.githubusercontent.com/580312/108113519-eb995800-7097-11eb-9e50-7640622ca15b.png)
