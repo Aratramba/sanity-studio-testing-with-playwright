@@ -83,11 +83,12 @@ SANITY_PLAYWRIGHT_TEST_TOKEN=<SANITY_PLAYWRIGHT_TEST_TOKEN>
 SANITY_PROJECT_ID=<PROJECT_ID>
 ```
 
-Go to manage.sanity.io
-
-Create a Sanity bot token with write access at settings/api. Call it SANITY_PLAYWRIGHT_TEST_TOKEN and paste the value that is shown in your .env file.
+Go to manage.sanity.io and create a Sanity bot token with write access at settings/api. Call it SANITY_PLAYWRIGHT_TEST_TOKEN and paste the value that is shown in your .env file.
 
 Also add a new origin for [localhost:3000](http://localhost:3000). Be sure to check 'Allow credentials'. This allows you to login to the studio.
+
+![Screenshot 2021-02-15 at 15 26 20](https://user-images.githubusercontent.com/580312/108379648-6bddcb80-7206-11eb-9965-a64d338f445f.png)
+![Screenshot 2021-02-15 at 15 25 02](https://user-images.githubusercontent.com/580312/108379645-6aac9e80-7206-11eb-9f29-9a9e22101d88.png)
 
 ---
 
