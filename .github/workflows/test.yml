@@ -21,4 +21,4 @@ jobs:
     - run: yarn
     - run: yarn test
       env:
-        STUDIO_TEST_TOKEN: ${{secrets.SANITY_PLAYWRIGHT_TEST_TOKEN}}
+        STUDIO_TEST_TOKEN: ${{secrets.STUDIO_TEST_TOKEN}}
