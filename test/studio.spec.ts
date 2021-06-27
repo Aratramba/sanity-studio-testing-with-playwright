@@ -2,7 +2,7 @@ import { test, expect } from "@playwright/test";
 
 require("dotenv").config();
 
-const DOMAIN = "http://localhost:3333";
+const DOMAIN = "http://localhost:3000";
 const SANITY_PROJECT_ID = require("../sanity.json")?.api?.projectId;
 
 async function setCookies(context) {
@@ -22,7 +22,7 @@ async function setCookies(context) {
 test.describe("Studio", () => {
   test.beforeEach(async ({ page, context }) => {
     await setCookies(context);
-    await page.goto(`${DOMAIN}`);
+    await page.goto(DOMAIN);
   });
 
   test("add movie", async ({ page }) => {

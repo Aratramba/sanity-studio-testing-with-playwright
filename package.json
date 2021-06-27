@@ -10,7 +10,7 @@
     "start": "sanity start",
     "build": "sanity build",
     "test:run": "DEBUG=pw:api playwright test test/studio.spec.ts --headed",
-    "test": "yarn test:run"
+    "test": "start-server-and-test \"yarn start\" http-get://localhost:3000 \"yarn test:run\""
   },
   "keywords": [
     "sanity"
@@ -31,7 +31,8 @@
   "devDependencies": {
     "@playwright/test": "^1.12.3",
     "dotenv": "^10.0.0",
-    "playwright": "^1.12.3"
+    "playwright": "^1.12.3",
+    "start-server-and-test": "^1.12.5"
   },
   "repository": {
     "type": "git",
