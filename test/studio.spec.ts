@@ -22,11 +22,10 @@ async function setCookies(context) {
 test.describe("Studio", () => {
   test.beforeEach(async ({ page, context }) => {
     await setCookies(context);
-    await page.goto(DOMAIN);
-    await page.waitForNavigation();
   });
 
   test("add movie", async ({ page }) => {
+    await page.goto(DOMAIN);
     await page.click("text=Movie");
     await page.click('[title="Create new Movie"]');
     await page.click('label:has-text("Title")');
@@ -37,6 +36,7 @@ test.describe("Studio", () => {
 
   
   test("remove movie", async ({ page }) => {
+    await page.goto(DOMAIN);
     await page.click("text=Test movie");
     await page.click('[aria-label="Actions"]');
     await page.click('[aria-label="Delete"]');
