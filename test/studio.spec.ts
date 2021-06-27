@@ -21,9 +21,9 @@ async function setCookies(context) {
 
 test.describe("Studio", () => {
   test.beforeEach(async ({ page, context }) => {
-    await page.waitForTimeout(5000);
-    await setCookies(context);
-    await page.goto(DOMAIN);
+      await setCookies(context);
+      await page.goto(DOMAIN);
+      await page.waitForTimeout(5000);
   });
 
   test("add movie", async ({ page }) => {
