@@ -20,11 +20,8 @@ async function setCookies(context) {
 }
 
 test.describe("Studio", () => {
-  test.beforeEach(async ({ page, context }) => {
+  test("add movie", async ({ page, context }) => {
     await setCookies(context);
-  });
-
-  test("add movie", async ({ page }) => {
     await page.goto(DOMAIN);
     await page.click("text=Movie");
     await page.click('[title="Create new Movie"]');
@@ -34,16 +31,15 @@ test.describe("Studio", () => {
     expect(await page.isVisible('[class*="PaneItem_"]:has-text("Test movie")'));
   });
 
-  
-  test("remove movie", async ({ page }) => {
+  test("remove movie", async ({ page, context }) => {
+    await setCookies(context);
     await page.goto(DOMAIN);
+    await page.click("text=Movie");
     await page.click("text=Test movie");
     await page.click('[aria-label="Actions"]');
     await page.click('[aria-label="Delete"]');
-    await page.click('text=Delete now');
+    await page.click("text=Delete now");
     expect(await page.isHidden('[class*="PaneItem_"]:has-text("Test movie")'));
     // await expect((await page.$$('[class*="PaneItem_"]:has-text("Test movie")')).length).toBe(0);
   });
-
-
 });
