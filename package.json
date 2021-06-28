@@ -11,7 +11,7 @@
     "build": "sanity build",
     "test:studio": "sanity start --port 3000",
     "test:run": "DEBUG=pw:api playwright test test/studio.spec.ts --headed",
-    "test": "start-server-and-test \"npm run test:studio\" http-get://localhost:3000 \"npm run test:run\""
+    "test": "start-server-and-test \"yarn test:studio\" http-get://localhost:3000 \"yarn test:run\""
   },
   "keywords": [
     "sanity"
