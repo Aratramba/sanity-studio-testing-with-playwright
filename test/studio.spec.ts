@@ -1,5 +1,4 @@
-import { test, expect, PlaywrightTestConfig } from "@playwright/test";
-import { chromium } from "playwright";
+import { test, expect } from "@playwright/test";
 
 require("dotenv").config();
 const DOMAIN = "http://localhost:3000";
