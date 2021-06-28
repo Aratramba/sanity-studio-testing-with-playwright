@@ -37,12 +37,12 @@ test.describe("Studio", () => {
 
   
   test("remove movie", async ({ page }) => {
+    await page.click("text=Movie");
     await page.click("text=Test movie");
     await page.click('[aria-label="Actions"]');
     await page.click('[aria-label="Delete"]');
     await page.click('text=Delete now');
-    expect(await page.isHidden('[class*="PaneItem_"]:has-text("Test movie")'));
-    // await expect((await page.$$('[class*="PaneItem_"]:has-text("Test movie")')).length).toBe(0);
+    await expect((await page.$$('[class*="PaneItem_"]:has-text("Test movie")')).length).toBe(0);
   });
 
 
